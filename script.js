@@ -1,16 +1,10 @@
-console.log("dont tell me");
 document.addEventListener('DOMContentLoaded', () =>  {
     const form = document.getElementById('inputform');
-    console.log(form);
-
     form.addEventListener('submit', function(event) {
         console.log(event);
         event.preventDefault();
         let shoot = document.getElementById('selection').value;
         let cshoot = Math.floor((Math.random() * 3)) + 1;
-
-        console.log(shoot);
-        console.log(cshoot);
 
         function result(x, y) {
             if (x === y) {
