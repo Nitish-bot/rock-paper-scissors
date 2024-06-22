@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () =>  {
     const form = document.getElementById('inputform');
     form.addEventListener('submit', function(event) {
-        console.log(event);
         event.preventDefault();
+        const res = document.getElementById('result');
         let shoot = document.getElementById('selection').value;
         let cshoot = Math.floor((Math.random() * 3)) + 1;
 
@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () =>  {
             }
         }
 
-        let res = document.getElementById('result');
         if (shoot === "") {
             res.textContent = 'Please select a valid response!';
         }
