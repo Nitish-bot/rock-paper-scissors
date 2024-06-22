@@ -10,10 +10,18 @@
         }
     </style>
 </head>
+
 <body>
     <div class="head">Rock, Paper, Scissors</div>
-    <form>
-        
-    </forM>
+    <form class="inputform">
+        <label for="input">Your choice:</label>
+        <select name="input" required>
+            <option value="">Select your move</option>
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+        </select>
+        <button type="submit">Shoot</button>
+    </form>
 </body>
 </html>
