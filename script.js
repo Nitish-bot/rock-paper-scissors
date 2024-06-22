@@ -5,5 +5,6 @@ document.addEventListener('DOMContentLoaded', () =>  {
         event.preventDefault();
         let shoot = document.getElementsByClassName('selection').value;
 
+        let cshoot = Math.floor((Math.random() * 3)) + 1;
     });
 });
