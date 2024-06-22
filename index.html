@@ -13,7 +13,7 @@
             margin-bottom: 32px;
         }
 
-        .inputform {
+        #inputform {
             font-family: Tahoma, Geneva, Verdana, sans-serif;
             font-size: 21px;
             font-weight: 500;
@@ -24,17 +24,17 @@
 
 <body>
     <div class="head">Rock, Paper, Scissors</div>
-    <form class="inputform">
-        <label for="input">Your choice:</label>
+    <form id="inputform">
+        <label>Your choice:</label>
         <select id="selection" name="input" required>
             <option value="">Select your move</option>
             <option value="1">Rock</option>
             <option value="2">Paper</option>
             <option value="3">Scissors</option>
         </select>
-        <button type="submit">Shoot</button>
+        <button type="button">Shoot</button>
     </form>
-    <div class="result"></div>
-    <script href="script.js"></script>
+    <div id="result"></div>
+    <script href="./script.js"></script>
 </body>
 </html>
