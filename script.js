@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () =>  {
     const form = document.getElementById('inputform');
+    const res = document.getElementById('result');
+
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        const res = document.getElementById('result');
-        let shoot = document.getElementById('selection').value;
-        let cshoot = Math.floor((Math.random() * 3)) + 1;
+        const shoot = event.submitter.value;
+        const cshoot = Math.floor((Math.random() * 3)) + 1;
 
         function result(x, y) {
             if (x === y) {
