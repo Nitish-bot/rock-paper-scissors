@@ -1,16 +1,19 @@
 document.addEventListener('DOMContentLoaded', () =>  {
     const form = document.getElementById('inputform');
     const res = document.getElementById('result');
+    const table = document.getElementById('scoreTable');
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
+        table.style.display = "block";
         const shoot = event.submitter.value;
         const cshoot = Math.floor((Math.random() * 3)) + 1;
 
         function result(x, y) {
             if (x === y) {
                 return 0;
-            } else if ((x === 1 && y === 3) || (x === 2 && y === 1) || (x === 3 && y === 2)) {
+            } else if ((x === 1 && y === 3) || (x === 2 && y === 1) || 
+            (x === 3 && y === 2)) {
                 return 1;
             } else {
                 return 2;
