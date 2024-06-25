@@ -20,24 +20,27 @@ document.addEventListener('DOMContentLoaded', () =>  {
             }
         }
 
-        if (shoot === "") {
-            res.textContent = 'Please select a valid response!';
-        }
-        else {
-            switch (result(+shoot, cshoot)) {
-                case 0:
-                    res.textContent = 'It\'s a draw';
-                    res.style.backgroundColor = 'grey';
-                    break;
-                case 1:
-                    res.textContent = 'You WIN!';
-                    res.style.backgroundColor = 'green';
-                    break;
-                case 2:
-                    res.textContent = 'You LOOSE!';
-                    res.style.backgroundColor = 'red';
-                    break;
-            }
+        let row = table.insertRow(-1);
+        let c1 = row.insertCell(0);
+        let c2 = row.insertCell(1);
+        switch (result(+shoot, cshoot)) {
+            case 0:
+                c1.innerText = "0.5";
+                c2.innerText = "0.5";
+                row.style.backgroundColor = 'grey';
+                break;
+            case 1:
+                c1.innerText = "1";
+                c2.innerText = "0";
+                c1.style.backgroundColor = 'green';
+                c2.style.backgroundColor = 'red';
+                break;
+            case 2:
+                c1.innerText = "0";
+                c2.innerText = "1";
+                c1.style.backgroundColor = 'red';
+                c2.style.backgroundColor = 'green';
+                break;
         }
     });
 });
