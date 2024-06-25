@@ -32,15 +32,17 @@
 <body>
     <div class="head">Rock, Paper, Scissors</div>
     <form id="inputform">
-        <label for="selection">Your choice:</label>
-        <select id="selection" name="input" required>
-            <option value="">Select your move</option>
-            <option value="1">Rock</option>
-            <option value="2">Paper</option>
-            <option value="3">Scissors</option>
-        </select>
-        <button type="submit">Shoot</button>
+        <label>SHOOT :</label>
+        <button type="submit" id="rock">Rock</button>
+        <button type="submit" id="paper">Paper</button>
+        <button type="submit" id="scissors">Scissors</button>
     </form>
+    <table id="scoreTable">
+        <tr>
+            <td>You</td>
+            <td>Computer</td>
+        </tr>
+    </table>
     <div id="result"></div>
     <script src="./script.js"></script>
 </body>
